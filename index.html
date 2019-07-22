@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <style>
+      * {
+        box-sizing: border-box;
+        font-size: 10pt;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        height: 200px;
+        width: 200px;
+      }
+
+      .coinTossGif {
+        background-image: url(https://media.giphy.com/media/10bv4HhibS9nZC/giphy.gif);
+        background-size: 200px 200px;
+      }
+
+      .heads {
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/a/a0/2006_Quarter_Proof.png);
+        background-size: cover;
+      }
+
+      .tails {
+        background-image: url(http://www.parkquarters.com/wp-content/uploads/2015/04/Kisatchie-Quarter.jpg);
+        background-size: cover;
+      }
+    </style>
+    <title>Coin Toss</title>
+  </head>
+  <body>
+    <h1>Coin Toss Game</h1>
+    <h2>Click the button to see if the coin lands on heads or tails</h2>
+    <section id="toss" class="coinTossGif"></section>
+    <button type="button" name="button">Toss Coin</button>
+
+    <span></span>
+
+<script>
+    document.querySelector('button').addEventListener('click', (e)=> {
+      let result = (Math.ceil(Math.random()*2))
+      console.log(result)
+      if(result = 1){
+        let response = "heads"
+        document.querySelector('span').innerHTML = response
+        // document.querySelector('#toss').classlist.remove('coinTossGif')
+        // // document.querySelector('#toss').classlist.remove('tails')
+        // document.querySelector('#toss').classlist.add('heads')
+      }else{
+        let response = "tails"
+        document.querySelector('span').innerHTML = response
+        // document.getElementById('toss').classlist.remove('coinTossGif')
+        // document.querySelector('#toss').classlist.add('tails')
+        // // document.querySelector('#toss').classlist.remove('heads')
+          }
+    });
+</script>
+  </body>
+</html>
